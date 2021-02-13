@@ -3,6 +3,7 @@
 Bruteforce OEM and NCK codes for Balong V7R11.
 
 Huawei E5573**, E5577**, E8372h, E3372h..
+
 Credits to rust3028, Decker, forth32..
 
 ## Installation
@@ -22,4 +23,5 @@ balong-v7r11 [-h|V] <HEX1> <HEX2>
 ```
 
 OEM - 'AT^NVRDEX=50502,0,128'
+
 NCK - 'AT^NVRDEX=50503,0,128'
