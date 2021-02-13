@@ -22,6 +22,14 @@ balong-v7r11 [-h|V] <HEX1> <HEX2>
 [-V] * Print version and exit
 ```
 
-OEM - 'AT^NVRDEX=50502,0,128'
+## AT
 
-NCK - 'AT^NVRDEX=50503,0,128'
+OEM:
+```text
+$ AT^NVRDEX=50502,0,128
+```
+
+NCK:
+```text
+$ AT^NVRDEX=50503,0,128
+```
