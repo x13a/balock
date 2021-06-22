@@ -5,29 +5,24 @@ exec_prefix ?= $(prefix)
 bindir      ?= $(exec_prefix)/bin
 
 bindestdir  := $(DESTDIR)$(bindir)
+targetdir   := ./zig-out
 
 all: build
 
 build:
-	cargo build --locked --release --bins
-
-cargo-install:
-	cargo install --locked --path "."
-
-cargo-uninstall:
-	cargo uninstall --locked $(NAME)
+	zig build
 
 installdirs:
 	install -d $(bindestdir)/
 
 install: installdirs
-	install ./target/release/$(NAME) $(bindestdir)/
+	install $(targetdir)/bin/$(NAME) $(bindestdir)/
 
 uninstall:
 	rm -f $(bindestdir)/$(NAME)
 
 test:
-	cargo test
+	zig build test
 
 clean:
-	cargo clean
+	rm -rf $(targetdir)/

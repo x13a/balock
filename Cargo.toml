@@ -1,8 +1,0 @@
-[package]
-name = "balong-v7r11"
-version = "0.1.0"
-authors = ["lucky"]
-edition = "2018"
-
-[dependencies]
-sha2 = "0.9"
