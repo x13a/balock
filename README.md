@@ -12,6 +12,11 @@ Credits to rust3028, Decker, forth32..
 $ make
 $ make install
 ```
+or
+```sh
+$ brew tap x13a/tap
+$ brew install x13a/tap/balong-v7r11
+```
 
 ## Usage
 
