@@ -92,9 +92,7 @@ pub fn bruteforce(allocator: *mem.Allocator, hex1: []const u8, hex2: []const u8)
         while (idx >= 0) : (idx -= 1) {
             buf2[idx] = @intCast(u8, @mod(i, 10)) + 48;
             i = @divTrunc(i, 10);
-            if (idx == 0) {
-                break;
-            }
+            if (idx == 0) break;
         }
         Sha256.hash(&buf2, buf1[0..Sha256.digest_length], .{});
         Sha256.hash(&buf1, &checksum2, .{});
