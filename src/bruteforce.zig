@@ -3,7 +3,6 @@ const fmt = std.fmt;
 const mem = std.mem;
 
 const Sha256 = std.crypto.hash.sha2.Sha256;
-const assert = std.debug.assert;
 
 const value_size: usize = Sha256.digest_length * 2;
 
