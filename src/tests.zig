@@ -1,3 +1,3 @@
 test "all" {
-    _ = @import("main.zig");
+    _ = @import("bruteforce.zig");
 }
