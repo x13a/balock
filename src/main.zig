@@ -7,7 +7,7 @@ const process = std.process;
 const bruteforce = @import("bruteforce.zig").bruteforce;
 const print = std.debug.print;
 
-const VERSION: []const u8 = "0.2.0";
+const VERSION: []const u8 = "0.2.1";
 
 const Exit = enum(u8) {
     success = 0,

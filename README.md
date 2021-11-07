@@ -1,4 +1,4 @@
-# balong-v7r11
+# bb-v7r11
 
 Bruteforce OEM and NCK codes for Balong V7R11.
 
@@ -12,16 +12,11 @@ Credits to rust3028, Decker, forth32..
 $ make
 $ make install
 ```
-or
-```sh
-$ brew tap x13a/tap
-$ brew install x13a/tap/balong-v7r11
-```
 
 ## Usage
 
 ```text
-balong-v7r11 [-h|V] <HEX1> <HEX2>
+bb-v7r11 [-h|V] <HEX1> <HEX2>
 
 [-h] * Print help and exit
 [-V] * Print version and exit

@@ -1,4 +1,4 @@
-NAME        := balong-v7r11
+NAME        := bb-v7r11
 
 prefix      ?= /usr/local
 exec_prefix ?= $(prefix)
