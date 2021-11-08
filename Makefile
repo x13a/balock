@@ -1,4 +1,4 @@
-NAME        := bb-v7r11
+NAME        := balock
 
 prefix      ?= /usr/local
 exec_prefix ?= $(prefix)

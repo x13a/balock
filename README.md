@@ -1,4 +1,4 @@
-# bb-v7r11
+# balock
 
 Bruteforce OEM and NCK codes for Balong V7R11.
 
@@ -16,7 +16,7 @@ $ make install
 ## Usage
 
 ```text
-bb-v7r11 [-h|V] <HEX1> <HEX2>
+balock [-h|V] <HEX1> <HEX2>
 
 [-h] * Print help and exit
 [-V] * Print version and exit

@@ -4,11 +4,11 @@ pub fn build(b: *std.build.Builder) void {
     const target = b.standardTargetOptions(.{});
     const mode = b.standardReleaseOptions();
 
-    const lib = b.addStaticLibrary("bb_v7r11", "src/bruteforce.zig");
+    const lib = b.addStaticLibrary("balock", "src/bruteforce.zig");
     lib.setBuildMode(mode);
     lib.install();
 
-    const exe = b.addExecutable("bb-v7r11", "src/main.zig");
+    const exe = b.addExecutable("balock", "src/main.zig");
     exe.setTarget(target);
     exe.setBuildMode(mode);
     exe.install();
