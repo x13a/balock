@@ -7,10 +7,9 @@ const Sha256 = std.crypto.hash.sha2.Sha256;
 const value_size: usize = Sha256.digest_length * 2;
 
 pub fn bruteforce(hex1: []const u8, hex2: []const u8) !?[8]u8 {
-    if (
-        mem.replacementSize(u8, hex1, " ", "") != value_size or 
-        mem.replacementSize(u8, hex2, " ", "") != value_size
-    ) {
+    if (mem.replacementSize(u8, hex1, " ", "") != value_size or
+        mem.replacementSize(u8, hex2, " ", "") != value_size)
+    {
         return error.InvalidInput;
     }
     var v1: [value_size]u8 = undefined;
