@@ -7,7 +7,7 @@ const process = std.process;
 const bruteforce = @import("bruteforce.zig").bruteforce;
 const print = std.debug.print;
 
-const VERSION: []const u8 = "0.2.2";
+const VERSION: []const u8 = "0.2.3";
 
 const Exit = enum(u8) {
     success = 0,
@@ -28,7 +28,7 @@ fn exit(code: Exit) noreturn {
     os.exit(@enumToInt(code));
 }
 
-fn getOpts(allocator: *mem.Allocator) !Opts {
+fn getOpts(allocator: mem.Allocator) !Opts {
     var opts = Opts{};
     var args = process.args();
     var prog_name = try (args.next(allocator) orelse return error.Invalid);
@@ -73,6 +73,6 @@ fn printUsage(exe: []const u8) void {
 pub fn main() !void {
     var arena = std.heap.ArenaAllocator.init(std.heap.page_allocator);
     defer arena.deinit();
-    const opts = try getOpts(&arena.allocator);
+    const opts = try getOpts(arena.allocator());
     print("{s}", .{(try bruteforce(opts.hex1, opts.hex2)) orelse return error.NotFound});
 }
